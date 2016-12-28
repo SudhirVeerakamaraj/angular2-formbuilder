@@ -1,0 +1,16 @@
+<div class="form-group"  [ngClass]="{'has-error': (DisplayError)}">
+    <label for=inputData.id class="control-label col-sm-4">{{inputData.label}}</label>
+    <div class="col-sm-6 col-xs-12">
+        <!--<select name="inputData.id" id="inputData.name" [(ngModel)]="inputData.value" class="form-control" (change)="dropdownValueChange($event)">
+        <option *ngFor="let option of inputData.options" [value]="option.value" [selected]="option.isSelected" >{{option.text}}</option>
+    </select>-->
+        <div class="radio" *ngFor="let option of inputData.options">
+            <label>
+                <input type="radio" id="{{inputData.id+option.value}}" [name]="inputData.id" [(ngModel)]="inputData.value" [value]="option.value" [checked]="option.isSelected"/>
+                {{option.text}}
+            </label>
+        </div>
+        <validation-messages *ngIf="DisplayError" [messages]="failures | async">
+        </validation-messages>
+    </div>
+</div>

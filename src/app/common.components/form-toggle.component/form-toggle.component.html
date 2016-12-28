@@ -1,0 +1,13 @@
+<div class="form-group" [ngClass]="{'has-error': (DisplayError)}">
+    <label for=inputData.id class="control-label col-sm-4">{{inputData.label}}</label>
+    <div class="col-sm-6 col-xs-12">
+        <div class="btn-group btn-group-lg" data-toggle="buttons">
+            <label class="btn btn-primary" *ngFor="let option of inputData.options; let i = index" [ngClass]="{active: option.isSelected}">
+                <input type="radio" id="{{inputData.id+option.value}}" [name]="inputData.id" [(ngModel)]="inputData.value" [value]="option.value" [checked]="option.isSelected" 
+                (change)="toggleChangeEvent(i)" /> {{option.text}}
+            </label>
+        </div>
+        <validation-messages *ngIf="DisplayError" [messages]="failures | async">
+        </validation-messages>
+    </div>
+</div>
