@@ -1,3 +1,0 @@
-interface IAppConfig{
-    ServerUrl:string;
-}
