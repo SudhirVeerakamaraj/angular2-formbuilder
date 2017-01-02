@@ -2,7 +2,7 @@ import {ControlValueAccessor} from '@angular/forms';
 
 export class ValueAccessorBase<T> implements ControlValueAccessor{
     private controlValue:T;
-    private changed = new Array<(value:T)=> void>();
+    public changed = new Array<(value:T)=> void>();
 
     private touched = new Array<()=> void>();
 
@@ -32,5 +32,6 @@ export class ValueAccessorBase<T> implements ControlValueAccessor{
     registerOnTouched(fn:()=> void){
         this.touched.push(fn);
     }
+    
 
 }

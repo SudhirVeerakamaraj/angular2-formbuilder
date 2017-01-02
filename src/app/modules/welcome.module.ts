@@ -7,11 +7,14 @@ import {FormTextComponent} from './../common.components/form-text.component/form
 import {FormDropdownComponent} from './../common.components/form-dropdown.component/form-dropdown.component';
 import {FormRadioButtonComponent} from './../common.components/form-radio.component/form-radio.component';
 import {FormToggleComponent} from './../common.components/form-toggle.component/form-toggle.component';
+import {FormCheckBoxGroupComponent} from './../common.components/form-checkbox.component/form-checkbox.component';
+import {FormCheckGroupComponent} from './../common.components/form-checkbox.component/form-checkbox-group';
+
 
 @NgModule({
     imports:[FormsModule,ReactiveFormsModule,CommonModule],    
-    exports:[BasicFormComponent,FormTextComponent,FormDropdownComponent,FormRadioButtonComponent,FormToggleComponent,FormError],
-    declarations:[BasicFormComponent,FormTextComponent,FormDropdownComponent,FormRadioButtonComponent,FormToggleComponent,FormError]
+    exports:[BasicFormComponent,FormTextComponent,FormDropdownComponent,FormRadioButtonComponent,FormToggleComponent,FormCheckBoxGroupComponent,FormCheckGroupComponent,FormError],
+    declarations:[BasicFormComponent,FormTextComponent,FormDropdownComponent,FormRadioButtonComponent,FormToggleComponent,FormCheckBoxGroupComponent,FormCheckGroupComponent,FormError]
 })
 
 export class WelcomeModule{;}

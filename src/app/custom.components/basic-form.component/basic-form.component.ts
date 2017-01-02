@@ -120,7 +120,35 @@ export class BasicFormComponent implements OnInit {
                     text:"Peaches",
                     isSelected:false
                 }]
-            }
+            },
+            inputCheckboxGroup:{
+                id: "simpleCheckboxGroup",
+                label: "Simple checkbox group",
+                value: null,
+                isRequired: true,
+                minlength: null,
+                maxlength: null,
+                placeholder: "some placeholder",
+                error: {
+                    required: "Please select one - radio"
+                },
+                options:[
+                {
+                    value:"1",
+                    text:"Apples",
+                    isSelected:false
+                },
+                {
+                    value:"2",
+                    text:"Oranges",
+                    isSelected:false
+                },
+                {
+                    value:"3",
+                    text:"Peaches",
+                    isSelected:false
+                }]
+            },
         };
     }
 
