@@ -24,6 +24,7 @@ const normalizeValidator =
   const func = (validator as Validator).validate.bind(validator);
   if (typeof func === 'function') {
     return (c: AbstractControl) => func(c);
+    
   } else {
     return <ValidatorFn | AsyncValidatorFn> validator;
   }

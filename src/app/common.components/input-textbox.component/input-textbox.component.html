@@ -6,11 +6,5 @@
         <input type="text" name="customInputbox" [(ngModel)]="textboxValue" #inputTextbox=ngModel (keyup)="update(inputTextbox.value)" placeholder="type something here"
             required />
 
-    </div>
-    <pre>
-        Is Valid?- {{inputTextbox.valid | json}} 
-        Is Dirty?- {{inputTextbox.dirty | json}}
-        Has been touched?- {{inputTextbox.touched|json}}
-    </pre>
-
+    </div>    
 </div>

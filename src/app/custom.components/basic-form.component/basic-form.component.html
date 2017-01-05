@@ -13,8 +13,16 @@
      <form-toggle [name]=formControls.inputToggleGroup.id [inputData]=formControls.inputToggleGroup [(required)]="formControls.inputToggleGroup.isRequired"
         [(ngModel)]=formControls.inputToggleGroup.value>
     </form-toggle>
-    <form-checkbox-group  [name]="formControls.inputCheckboxGroup.id" [(ngModel)]=formControls.inputCheckboxGroup.value [inputData]=formControls.inputCheckboxGroup  [(required)]="formControls.inputToggleGroup.isRequired">
+    <form-autocomplete [name]="formControls.inputAutocomplete.id" 
+        [(ngModel)]=formControls.inputAutocomplete.value 
+        [inputData]=formControls.inputAutocomplete 
+        [allowListValueOnly]=true
+        [(required)]="formControls.inputAutocomplete.isRequired"></form-autocomplete>
+    <form-checkbox-group  [name]="formControls.inputCheckboxGroup.id" [(ngModel)]=formControls.inputCheckboxGroup.value 
+        [inputData]=formControls.inputCheckboxGroup  
+        [(required)]="formControls.inputToggleGroup.isRequired">
     </form-checkbox-group>
+    
     <button type="submit" [disabled]="!mainForm.valid">Submit Form</button>
     <pre>
         Form errors- {{mainForm.error | json}} 

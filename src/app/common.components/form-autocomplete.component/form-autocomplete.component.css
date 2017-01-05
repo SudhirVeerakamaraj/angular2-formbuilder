@@ -1,0 +1,20 @@
+.display-options{
+    border: 1px solid #ccc;    
+    z-index: 1000;
+}
+.display-options > ul{
+    list-style-type: none;
+    padding:0px;
+    margin-bottom: 0px;
+}
+.display-options > ul > li{    
+    padding:5px;
+}
+.display-options > ul > li:hover{    
+    background: #ccc;
+
+}
+
+.selected-item{
+    background: #ccc;
+}

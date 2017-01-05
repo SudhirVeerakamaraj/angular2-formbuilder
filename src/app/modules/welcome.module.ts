@@ -9,12 +9,14 @@ import {FormRadioButtonComponent} from './../common.components/form-radio.compon
 import {FormToggleComponent} from './../common.components/form-toggle.component/form-toggle.component';
 import {FormCheckBoxGroupComponent} from './../common.components/form-checkbox.component/form-checkbox.component';
 import {FormCheckGroupComponent} from './../common.components/form-checkbox.component/form-checkbox-group';
+import {FormAutocompleteComponent} from './../common.components/form-autocomplete.component/form-autocomplete.component';
+import {ModelChangeObservableDirective} from './../common.directives/ng-model-change-observable.directive/ng-model-change-observable.directive'
 
 
 @NgModule({
     imports:[FormsModule,ReactiveFormsModule,CommonModule],    
-    exports:[BasicFormComponent,FormTextComponent,FormDropdownComponent,FormRadioButtonComponent,FormToggleComponent,FormCheckBoxGroupComponent,FormCheckGroupComponent,FormError],
-    declarations:[BasicFormComponent,FormTextComponent,FormDropdownComponent,FormRadioButtonComponent,FormToggleComponent,FormCheckBoxGroupComponent,FormCheckGroupComponent,FormError]
+    exports:[BasicFormComponent,FormTextComponent,FormDropdownComponent,FormRadioButtonComponent,FormToggleComponent,FormCheckBoxGroupComponent,FormCheckGroupComponent,FormAutocompleteComponent,FormError],
+    declarations:[BasicFormComponent,FormTextComponent,FormDropdownComponent,FormRadioButtonComponent,FormToggleComponent,FormCheckBoxGroupComponent,FormCheckGroupComponent,FormAutocompleteComponent,FormError,ModelChangeObservableDirective]
 })
 
 export class WelcomeModule{;}

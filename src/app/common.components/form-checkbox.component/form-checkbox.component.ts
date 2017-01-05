@@ -72,7 +72,6 @@ ngAfterViewInit() {
         // set the current selected to true
         this.inputData.options[index].isSelected = !this.inputData.options[index].isSelected;
         this.addOrRemoveValue(this.inputData.options[index]);
-        debugger;
         this.model.control.markAsDirty();
         this.model.control.markAsTouched();
     }

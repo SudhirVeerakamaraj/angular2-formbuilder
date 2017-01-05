@@ -149,6 +149,20 @@ export class BasicFormComponent implements OnInit {
                     isSelected:false
                 }]
             },
+            inputAutocomplete: {
+                id: "autocomplete",
+                label: "Auto complete textbox",
+                value: "",
+                isRequired: true,
+                minlength: 0,
+                maxlength: 255,
+                placeholder: "some placeholder",
+                error: {
+                    required: "Please enter this field",
+                    minlength: "this field should have atleast 2 characters",
+                    maxlength: "this field can have a max length of 10 character"
+                }
+            },
         };
     }
 
