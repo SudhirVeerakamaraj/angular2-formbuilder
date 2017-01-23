@@ -60,7 +60,13 @@ export class FormAutocompleteComponent extends ElementBase<string> {
                 this.selectedItems = this.allCountries.filter((country: string) => {
                     return query.test(country)
                 })
-            })
+            });
+            this.getAucompleteValues.filter((text: string) => text.length <= 2)
+            .debounceTime(300)
+            .subscribe((countryName: string) => {
+                
+                this.selectedItems = [];
+            });
     }
     ngOnInit(): void {
         this.setInitialOptions();

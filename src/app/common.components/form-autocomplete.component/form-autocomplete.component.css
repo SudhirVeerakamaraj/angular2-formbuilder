@@ -1,6 +1,8 @@
 .display-options{
     border: 1px solid #ccc;    
     z-index: 1000;
+    background: white;    
+    padding:0px !important;
 }
 .display-options > ul{
     list-style-type: none;

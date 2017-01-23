@@ -1,13 +1,13 @@
 <div class="form-group"  [ngClass]="{'has-error': (IsDirtyOrTouched && (invalid | async))}">
-    <label for=inputData.id class="control-label col-sm-4">{{inputData.label}}</label>
-    <div class="col-sm-6">
+    <label for=inputData.id class="control-label col-sm-4 col-xs-12">{{inputData.label}}</label>
+    <div class="col-sm-6 col-xs-12">
         <input type="text" [(ngModel)]="inputData.value" class="form-control" 
             [ngModelChangeObservable]="getAucompleteValues" 
             [ngClass]="{invalid: (invalid | async)}"
             [value]="inputData.value" 
             (keydown)="inputElKeyHandler($event)" 
             (blur)="blur($event)"/>
-        <div *ngIf="selectedItems && selectedItems.length > 0" class="display-options">
+        <div *ngIf="selectedItems && selectedItems.length > 0" class="display-options col-sm-12">
             <ul>
                 <li *ngFor="let selectedItem of selectedItems; let i= index" [ngClass]="{'selected-item': i===itemIndex}" (click)="listElClick(selectedItem)">{{selectedItem}}</li>
             </ul>
