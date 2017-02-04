@@ -1,7 +1,7 @@
 <div class="form-group" [ngClass]="{'has-error': (IsDirtyOrTouched && (invalid | async))}">
     <label for=inputData.id class="control-label col-sm-4 col-xs-12">{{inputData.label}}</label>
     <div class="col-sm-6 col-xs-12">
-        <checkbox-group [(ngModel)]=inputData.value required >
+        <checkbox-group [(ngModel)]=inputData.value >
         <div class="checkbox" *ngFor="let option of inputData.options;let i = index">
             <label>
                 <input type="checkbox" [checked]="option.isSelected" (change)="checkboxChangeEvent(i)" value="inputData.value"/>
