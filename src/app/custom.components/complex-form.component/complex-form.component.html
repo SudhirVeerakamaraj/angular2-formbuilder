@@ -1,0 +1,13 @@
+<form id="mainForm" name="mainForm" novalidate (ngSubmit)="onSubmit()" #mainForm="ngForm" class="form-horizontal container"
+    role="form">
+    <form-autocomplete [name]="formControls.inputAutocomplete.id" [(ngModel)]=formControls.inputAutocomplete.value [inputData]=formControls.inputAutocomplete
+        [allowListValueOnly]=true [(required)]="formControls.inputAutocomplete.isRequired"></form-autocomplete>
+    <form-checkbox-group [name]="formControls.inputCheckboxGroup.id" [(ngModel)]=formControls.inputCheckboxGroup.value [inputData]=formControls.inputCheckboxGroup
+        [(required)]="formControls.inputCheckboxGroup.isRequired">
+    </form-checkbox-group>
+    <div class="row">
+        <div class="col-sm-6 pull-right"> 
+            <button type="submit" class="btn btn-lg btn-primary pull-right" [disabled]="!mainForm.valid">Submit Form</button>
+        </div>
+    </div>
+</form>

@@ -10,22 +10,12 @@
     <form-radio [name]=formControls.inputRadioGroup.id [inputData]=formControls.inputRadioGroup [(required)]="formControls.inputRadioGroup.isRequired"
         [(ngModel)]=formControls.inputRadioGroup.value>
     </form-radio>
-     <form-toggle [name]=formControls.inputToggleGroup.id [inputData]=formControls.inputToggleGroup [(required)]="formControls.inputToggleGroup.isRequired"
+    <form-toggle [name]=formControls.inputToggleGroup.id [inputData]=formControls.inputToggleGroup [(required)]="formControls.inputToggleGroup.isRequired"
         [(ngModel)]=formControls.inputToggleGroup.value>
     </form-toggle>
-    <form-autocomplete [name]="formControls.inputAutocomplete.id" 
-        [(ngModel)]=formControls.inputAutocomplete.value 
-        [inputData]=formControls.inputAutocomplete 
-        [allowListValueOnly]=true
-        [(required)]="formControls.inputAutocomplete.isRequired"></form-autocomplete>
-    <form-checkbox-group  [name]="formControls.inputCheckboxGroup.id" [(ngModel)]=formControls.inputCheckboxGroup.value 
-        [inputData]=formControls.inputCheckboxGroup  
-        [(required)]="formControls.inputToggleGroup.isRequired">
-    </form-checkbox-group>
-    
-    <button type="submit" class="btn btn-lg btn-primary pull-right" [disabled]="!mainForm.valid">Submit Form</button>
-    <pre class="alert" [ngClass]="{'alert-success': mainForm.valid , 'alert-danger': !mainForm.valid}">
-        Form value- {{mainForm.value | json}}
-    </pre>
-
+    <div class="row">
+        <div class="col-sm-6 pull-right">
+            <button type="submit" class="btn btn-lg btn-primary pull-right" [disabled]="!mainForm.valid">Next</button>
+        </div>
+    </div>
 </form>

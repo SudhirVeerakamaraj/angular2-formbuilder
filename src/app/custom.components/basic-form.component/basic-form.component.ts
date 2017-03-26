@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 
-import { FormTextComponent } from './../../common.components/form-text.component/form-text.component'
-import { FormDropdownComponent } from './../../common.components/form-dropdown.component/form-dropdown.component'
-import { FormRadioButtonComponent } from './../../common.components/form-radio.component/form-radio.component'
-
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'basic-form',
@@ -13,7 +10,7 @@ import { FormRadioButtonComponent } from './../../common.components/form-radio.c
 export class BasicFormComponent implements OnInit {
 
     public formControls: any;
-    constructor() {
+    constructor(private router:Router) {
         ;
     }
 
@@ -166,7 +163,7 @@ export class BasicFormComponent implements OnInit {
         };
     }
 
-    onSubmit = function () {
-        return false;
+    onSubmit () {
+        this.router.navigate(['/complexform']);
     }
 }

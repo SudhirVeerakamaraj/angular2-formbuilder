@@ -1,7 +1,7 @@
 import {Component,NgModule} from '@angular/core'
 import { FormsModule,ReactiveFormsModule }  from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import {BasicFormComponent} from './../custom.components/basic-form.component/basic-form.component';
+import {BasicFormComponent,ComplexFormComponent} from './../custom.components';
 import {FormError} from './../common.components/form-error.component/form-error.component';
 import {FormTextComponent} from './../common.components/form-text.component/form-text.component';
 import {FormDropdownComponent} from './../common.components/form-dropdown.component/form-dropdown.component';
@@ -15,8 +15,8 @@ import {ModelChangeObservableDirective} from './../common.directives/ng-model-ch
 
 @NgModule({
     imports:[FormsModule,ReactiveFormsModule,CommonModule],    
-    exports:[BasicFormComponent,FormTextComponent,FormDropdownComponent,FormRadioButtonComponent,FormToggleComponent,FormCheckBoxGroupComponent,FormCheckGroupComponent,FormAutocompleteComponent,FormError],
-    declarations:[BasicFormComponent,FormTextComponent,FormDropdownComponent,FormRadioButtonComponent,FormToggleComponent,FormCheckBoxGroupComponent,FormCheckGroupComponent,FormAutocompleteComponent,FormError,ModelChangeObservableDirective]
+    exports:[BasicFormComponent,ComplexFormComponent,FormTextComponent,FormDropdownComponent,FormRadioButtonComponent,FormToggleComponent,FormCheckBoxGroupComponent,FormCheckGroupComponent,FormAutocompleteComponent,FormError],
+    declarations:[BasicFormComponent,ComplexFormComponent,FormTextComponent,FormDropdownComponent,FormRadioButtonComponent,FormToggleComponent,FormCheckBoxGroupComponent,FormCheckGroupComponent,FormAutocompleteComponent,FormError,ModelChangeObservableDirective]
 })
 
 export class WelcomeModule{;}

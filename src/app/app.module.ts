@@ -2,6 +2,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 
 import {HttpModule} from '@angular/Http';
+import {RoutingModule} from './app.route';
 import {WelcomeModule} from './modules/welcome.module';
 
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import {AppConfig} from './app.config'
   imports: [
     BrowserModule,
     HttpModule,
+    RoutingModule,
     WelcomeModule
   ],
   declarations: [
