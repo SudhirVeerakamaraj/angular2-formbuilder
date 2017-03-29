@@ -11,37 +11,62 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ['.js', '.ts']
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.ts$/,
-        loaders: ['awesome-typescript-loader', 'angular2-template-loader']
+        use: [
+          { loader: 'awesome-typescript-loader' },
+          { loader: 'angular2-template-loader' }
+        ]
       },
       {
         test: /\.html$/,
-        loader: 'html'
+        // loader: 'html'
+        use: [{ loader: 'html-loader' }]
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'file?name=assets/[name].[hash].[ext]'
+        use: [
+          {
+            loader: 'file',
+            options: { name: 'assets/[name].[hash].[ext]' }
+          }]
+        // loader: 'file?name=assets/[name].[hash].[ext]'
       },
       {
         test: /\.css$/,
-        exclude: helpers.root('src', 'app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+        // exclude: helpers.root('src', 'app'),
+        exclude: [helpers.root('src', 'app')],
+
+        // loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader?sourceMap',
+        })
       },
       {
         test: /\.css$/,
-        include: helpers.root('src', 'app'),
-        loader: 'raw'
+        // include: helpers.root('src', 'app'),
+        include: [helpers.root('src', 'app')],
+        // loader: 'raw'
+        use: [{ loader: 'raw-loader' }]
       },
       {
-                test: /\.less$/,
-                loader: ExtractTextPlugin.extract('style-loader','css-loader!less-loader'),
-                exclude:/node_modules/
+        test: /\.less$/,
+        exclude: [/node_modules/],
+        // loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader',
+            'less-loader'
+          ]
+        })
+
       }
     ]
   },
