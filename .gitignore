@@ -1,6 +1,4 @@
 /node_modules/
-<<<<<<< HEAD
 npm-debug*
-=======
->>>>>>> origin/master
 /coverage/
+dist/*
