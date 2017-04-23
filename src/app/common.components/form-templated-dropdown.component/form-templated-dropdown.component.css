@@ -1,0 +1,28 @@
+.display-options{
+    border: 1px solid #ccc;    
+    z-index: 1000;
+    background: white;    
+    padding:0px !important;
+    position: absolute;
+    width: 95%;
+}
+.display-options > ul{
+    list-style-type: none;
+    padding:0px;
+    margin-bottom: 0px;
+}
+.display-options > ul > li{    
+    padding:5px;
+}
+.display-options > ul > li:hover{    
+    background: #ccc;
+
+}
+
+.selected-item{
+    background: #ccc;
+}
+
+.padding-top-5 {
+    padding-top: 5px;
+}

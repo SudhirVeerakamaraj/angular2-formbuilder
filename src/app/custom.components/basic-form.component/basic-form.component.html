@@ -14,6 +14,11 @@
         [(ngModel)]=formControls.inputToggleGroup.value>
     </form-toggle>
     <div class="row">
+        <pre>
+            {{mainForm.value | json}}
+        </pre>
+    </div>
+    <div class="row">
         <div class="col-sm-6 pull-right">
             <button type="submit" class="btn btn-lg btn-primary pull-right" [disabled]="!mainForm.valid">Next</button>
         </div>

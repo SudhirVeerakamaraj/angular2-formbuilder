@@ -15,7 +15,7 @@ export class ComplexFormComponent implements OnInit {
 
     ngOnInit() {
         this.formControls = {
-            inputCheckboxGroup:{
+            inputCheckboxGroup: {
                 id: "simpleCheckboxGroup",
                 label: "Simple checkbox group",
                 value: null,
@@ -26,22 +26,22 @@ export class ComplexFormComponent implements OnInit {
                 error: {
                     required: "Please select one - radio"
                 },
-                options:[
-                {
-                    value:"1",
-                    text:"Apples",
-                    isSelected:false
-                },
-                {
-                    value:"2",
-                    text:"Oranges",
-                    isSelected:false
-                },
-                {
-                    value:"3",
-                    text:"Peaches",
-                    isSelected:false
-                }]
+                options: [
+                    {
+                        value: "1",
+                        text: "Apples",
+                        isSelected: false
+                    },
+                    {
+                        value: "2",
+                        text: "Oranges",
+                        isSelected: false
+                    },
+                    {
+                        value: "3",
+                        text: "Peaches",
+                        isSelected: false
+                    }]
             },
             inputAutocomplete: {
                 id: "autocomplete",
@@ -57,6 +57,51 @@ export class ComplexFormComponent implements OnInit {
                     maxlength: "this field can have a max length of 10 character"
                 }
             },
+            inputTemplateDropdwon: {
+                id: "inputTemplateDropdwon",
+                label: "Template Dropdown",
+                value: null,
+                isRequired: true,
+                minlength: null,
+                maxlength: null,
+                placeholder: "some placeholder",
+                error: {
+                    required: "Please select one - template dropdown"
+                },
+                options: [
+                    {
+                        value: null,
+                        text: {
+                            iconClass: null,
+                            description: "-- Please select a value --"
+                        },
+                        isSelected: false
+                    },
+                    {
+                        value: "1",
+                        text: {
+                            iconClass: "glyphicon-play-circle",
+                            description: "Play Circle"
+                        },
+                        isSelected: false
+                    },
+                    {
+                        value: "2",
+                        text: {
+                            iconClass: "glyphicon-repeat",
+                            description: "Repeat"
+                        },
+                        isSelected: false
+                    },
+                    {
+                        value: "3",
+                        text: {
+                            iconClass: "glyphicon-refresh",
+                            description: "Refresh"
+                        },
+                        isSelected: false
+                    }]
+            }
         };
     }
 

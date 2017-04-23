@@ -1,0 +1,22 @@
+<div class="form-group" [ngClass]="{'has-error': (IsDirtyOrTouched && (invalid | async))}">
+    <label for=inputData.id class="control-label col-sm-4">{{inputData.label}}</label>
+    <div class="col-sm-6 col-xs-12">
+        <form-templated-dropdown-group [(ngModel)]="inputData.value">
+            <div class="form-control" (click)="displayElClick($event)" tabindex="0" (keydown)="inputElKeyHandler($event)" value="inputData.value">
+                <ng-content select=".selected-item-template"></ng-content>
+                <span class="glyphicon glyphicon-chevron-down pull-right padding-top-5"></span>
+            </div>
+            <div class="display-options" *ngIf="showOptions">
+                <ul>
+                    <li *ngFor="let option of inputData.options; let i= index" [ngClass]="{'selected-item': i===itemIndex}" (click)="onSelect(option)">
+                        <template [ngTemplateOutlet]="template" [ngOutletContext]="{row: option}">
+                        </template>
+                        <!--[ngOutletContext]="option"-->
+                    </li>
+                </ul>
+            </div>
+            <validation-messages *ngIf="IsDirtyOrTouched && (invalid | async)" [messages]="failures | async">
+            </validation-messages>
+        </form-templated-dropdown-group>
+    </div>
+</div>
