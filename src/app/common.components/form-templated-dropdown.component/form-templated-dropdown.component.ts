@@ -1,4 +1,4 @@
-import { Component, ContentChild, TemplateRef, Input, OnInit, Optional, Inject, ViewChild } from "@angular/core";
+import { Component, ContentChild, TemplateRef, Input, OnInit, Optional, Inject, ViewChild } from '@angular/core';
 
 import { ElementBase } from './../../common-util/element-base';
 
@@ -32,7 +32,7 @@ export class FormTemplateDropdownComponent extends ElementBase<IOption>  {
     showOptions: boolean;
 
     private totalNumItem: number;
-    public itemIndex: number = 0;
+    public itemIndex = 0;
     public DisplayError: Observable<boolean>;
 
     constructor(
@@ -70,7 +70,6 @@ export class FormTemplateDropdownComponent extends ElementBase<IOption>  {
     }
 
     public displayElClick($event: any): void {
-
         this.showOptions = !this.showOptions;
     }
 
@@ -80,13 +79,13 @@ export class FormTemplateDropdownComponent extends ElementBase<IOption>  {
         }
 
         switch ($event.keyCode) {
-            case 27: // ESC, hide auto complete        
+            case 27: // ESC, hide auto complete
                 break;
 
             case 38: // UP, select the previous li el
                 this.showOptions = true;
                 this.itemIndex = (this.totalNumItem + this.itemIndex - 1) % this.totalNumItem;
-                $event.preventDefault();// without this the page will scroll as you move the up and down arrows
+                $event.preventDefault(); // without this the page will scroll as you move the up and down arrows
                 break;
 
             case 40: // DOWN, select the next li el or the first one
@@ -98,9 +97,9 @@ export class FormTemplateDropdownComponent extends ElementBase<IOption>  {
             case 13: // ENTER, choose it!!
                 // this.listElClick(this.selectedItems[this.itemIndex]);
                 this.onSelect(this.inputData.options[this.itemIndex]);
-                $event.preventDefault();// without this the page will scroll as you move the up and down arrows
+                $event.preventDefault(); // without this the page will scroll as you move the up and down arrows
                 break;
-            case 9:// TAB, choose it and close the options
+            case 9: // TAB, choose it and close the options
                 this.onSelect(this.inputData.options[this.itemIndex]);
                 break;
         }

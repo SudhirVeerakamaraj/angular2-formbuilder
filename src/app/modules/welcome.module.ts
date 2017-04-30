@@ -18,7 +18,8 @@ import { ModelChangeObservableDirective }
 @NgModule({
     imports: [FormsModule, ReactiveFormsModule, CommonModule],
     exports: [BasicFormComponent, ComplexFormComponent, FormTextComponent, FormDropdownComponent,
-        FormRadioButtonComponent, FormToggleComponent, FormCheckBoxGroupComponent, FormCheckGroupComponent, FormAutocompleteComponent, FormTemplatedDropdownGroup,
+        FormRadioButtonComponent, FormToggleComponent, FormCheckBoxGroupComponent, FormCheckGroupComponent,
+        FormAutocompleteComponent, FormTemplatedDropdownGroup,
         FormTemplateDropdownComponent,
         FormError],
     declarations: [BasicFormComponent, ComplexFormComponent, FormTextComponent, FormDropdownComponent,
