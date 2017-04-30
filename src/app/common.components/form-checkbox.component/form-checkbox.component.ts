@@ -54,7 +54,7 @@ export class FormCheckBoxGroupComponent extends ElementBase<Array<IOption>>  {
             }
             this.value.push(inputValue);
         } else {
-            for (var i = 0; i < this.value.length; i++) {
+            for (let i = 0; i < this.value.length; i++) {
                 if (this.value[i].value === inputValue.value) {
                     this.value.splice(i, 1);
                     break;
@@ -75,6 +75,4 @@ export class FormCheckBoxGroupComponent extends ElementBase<Array<IOption>>  {
         this.model.control.markAsDirty();
         this.model.control.markAsTouched();
     }
-
-
 }

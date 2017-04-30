@@ -55,9 +55,10 @@ export abstract class ElementBase<T> extends ValueAccessorBase<T> {
   }
 
   protected get IsDirtyOrTouched(): boolean {
-    if (this.model) {      
+    if (this.model) {
       return this.model.dirty || this.model.touched;
     }
+    return false;
   }
 
   protected get failures(): Observable<Array<string>> {

@@ -34,7 +34,7 @@ export class FormTextComponent extends ElementBase<string> {
     @Optional() @Inject(NG_ASYNC_VALIDATORS) asyncValidators: Array<any>,
   ) {
     super(validators, asyncValidators);
-    //this.CustomErrorMessages = this.inputData.error;
+    // this.CustomErrorMessages = this.inputData.error;
   }
   ngOnInit(): void {
     this.CustomErrorMessages = this.inputData.error;

@@ -12,8 +12,8 @@ import { FormCheckGroupComponent } from './../common.components/form-checkbox.co
 import { FormAutocompleteComponent } from './../common.components/form-autocomplete.component/form-autocomplete.component';
 import { FormTemplateDropdownComponent } from './../common.components/form-templated-dropdown.component/form-templated-dropdown.component';
 import { FormTemplatedDropdownGroup } from './../common.components/form-templated-dropdown.component/form-templated-dropdown-group'
-import { ModelChangeObservableDirective } from './../common.directives/ng-model-change-observable.directive/ng-model-change-observable.directive'
-
+import { ModelChangeObservableDirective }
+    from './../common.directives/ng-model-change-observable.directive/ng-model-change-observable.directive'
 
 @NgModule({
     imports: [FormsModule, ReactiveFormsModule, CommonModule],

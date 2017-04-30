@@ -10,7 +10,6 @@ import { AppConfig } from './app.config';
 
 import { map as _map, find as _find, findWhere as _findWhere } from 'underscore';
 
-
 @NgModule({
   imports: [
     BrowserModule,
@@ -25,4 +24,7 @@ import { map as _map, find as _find, findWhere as _findWhere } from 'underscore'
   providers: [AppConfig],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+
+export class AppModule {
+  ;
+}
