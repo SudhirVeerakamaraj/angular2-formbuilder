@@ -16,7 +16,7 @@ import {
 
 import { ElementBase } from './../../common-util/element-base';
 
-import {Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'checkbox-group',

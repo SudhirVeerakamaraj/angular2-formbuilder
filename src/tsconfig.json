@@ -3,6 +3,7 @@
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
+    "allowUnusedLabels": false,
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -11,6 +12,7 @@
       "dom"
     ],
     "noImplicitAny": true,
+    "noImplicitReturns": true,
     "suppressImplicitAnyIndexErrors": true,
     "typeRoots": [
       "../node_modules/@types/"

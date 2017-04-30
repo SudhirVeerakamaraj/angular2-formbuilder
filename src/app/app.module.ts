@@ -1,12 +1,12 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-import {HttpModule} from '@angular/Http';
-import {RoutingModule} from './app.route';
-import {WelcomeModule} from './modules/welcome.module';
+import { HttpModule } from '@angular/Http';
+import { RoutingModule } from './app.route';
+import { WelcomeModule } from './modules/welcome.module';
 
 import { AppComponent } from './app.component';
-import {AppConfig} from './app.config'
+import { AppConfig } from './app.config'
 
 
 @NgModule({
@@ -19,8 +19,11 @@ import {AppConfig} from './app.config'
   declarations: [
     AppComponent
   ],
-  bootstrap: [ AppComponent ],
-  providers:[AppConfig],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA ]
+  bootstrap: [AppComponent],
+  providers: [AppConfig],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+
+export class AppModule {
+  ;
+}
