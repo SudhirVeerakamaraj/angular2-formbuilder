@@ -38,7 +38,7 @@ export class FormToggleComponent extends ElementBase<string> implements AfterVie
         @Optional() @Inject(NG_ASYNC_VALIDATORS) asyncValidators: Array<any>,
     ) {
         super(validators, asyncValidators);
-        //this.CustomErrorMessages = this.inputData.error;
+        // this.CustomErrorMessages = this.inputData.error;
 
     }
     ngOnInit(): void {
@@ -47,10 +47,10 @@ export class FormToggleComponent extends ElementBase<string> implements AfterVie
     }
 
     toggleChangeEvent = (index: number) => {
-        
+
         // change the current selected to false
-        for (var i = 0; i < this.inputData.options.length; i++) {
-            if(this.inputData.options[i].isSelected){
+        for (let i = 0; i < this.inputData.options.length; i++) {
+            if (this.inputData.options[i].isSelected) {
                 this.inputData.options[i].isSelected = false;
                 break;
             }

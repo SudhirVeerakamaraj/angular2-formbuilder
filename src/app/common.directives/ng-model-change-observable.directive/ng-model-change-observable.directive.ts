@@ -1,4 +1,4 @@
-import {Directive, Input, EventEmitter, HostListener} from '@angular/core'
+import { Directive, Input, EventEmitter, HostListener } from '@angular/core'
 
 @Directive({
     selector: '[ngModelChangeObservable]'

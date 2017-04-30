@@ -26,23 +26,23 @@ import { ElementBase } from './../../common-util/element-base';
 })
 export class FormDropdownComponent extends ElementBase<string> {
     @ViewChild(NgModel) model: NgModel;
-    
+
     @Input() inputData: ICustomFormControl;
 
     constructor(
         @Optional() @Inject(NG_VALIDATORS) validators: Array<any>,
         @Optional() @Inject(NG_ASYNC_VALIDATORS) asyncValidators: Array<any>,
     ) {
-        super(validators, asyncValidators);        
-        //this.CustomErrorMessages = this.inputData.error;
+        super(validators, asyncValidators);
+        // this.CustomErrorMessages = this.inputData.error;
     }
     ngOnInit(): void {
         this.CustomErrorMessages = this.inputData.error;
 
     }
 
-    dropdownValueChange = ($event:any)=>{
-        console.log("$event",$event);
+    dropdownValueChange = ($event: any) => {
+        console.log('$event', $event);
     }
 
 }
