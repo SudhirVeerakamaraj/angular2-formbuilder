@@ -15,7 +15,7 @@ export class ComplexFormComponent implements OnInit {
 
     ngOnInit() {
         this.formControls = {
-            inputCheckboxGroup:{
+            inputCheckboxGroup: {
                 id: "simpleCheckboxGroup",
                 label: "Simple checkbox group",
                 value: null,
@@ -26,22 +26,22 @@ export class ComplexFormComponent implements OnInit {
                 error: {
                     required: "Please select one - radio"
                 },
-                options:[
-                {
-                    value:"1",
-                    text:"Apples",
-                    isSelected:false
-                },
-                {
-                    value:"2",
-                    text:"Oranges",
-                    isSelected:false
-                },
-                {
-                    value:"3",
-                    text:"Peaches",
-                    isSelected:false
-                }]
+                options: [
+                    {
+                        value: "1",
+                        text: "Apples",
+                        isSelected: false
+                    },
+                    {
+                        value: "2",
+                        text: "Oranges",
+                        isSelected: false
+                    },
+                    {
+                        value: "3",
+                        text: "Peaches",
+                        isSelected: false
+                    }]
             },
             inputAutocomplete: {
                 id: "autocomplete",
