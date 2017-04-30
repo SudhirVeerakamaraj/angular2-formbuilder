@@ -13,8 +13,9 @@ interface ICustomFormControl {
 interface IError {
     [key: string]: string;
 }
+
 interface IOption {
-    value: string;
-    text: string;
+    value: any;
+    text: any;
     isSelected: boolean;
 }

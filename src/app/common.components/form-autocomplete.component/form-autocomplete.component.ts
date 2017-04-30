@@ -132,7 +132,9 @@ export class FormAutocompleteComponent extends ElementBase<string> {
     }
 
     public blur($event: any): void {
-        setTimeout(() => { this.cleanUpWhileLeavingInputEl(); }, 600); // this timeout because blur fires before select
+        setTimeout(() => { // this timeout because blur fires before select
+            this.cleanUpWhileLeavingInputEl();
+        }, 600);
     }
 
     private cleanUpWhileLeavingInputEl(): void {

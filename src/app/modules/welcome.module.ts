@@ -10,22 +10,22 @@ import { FormToggleComponent } from './../common.components/form-toggle.componen
 import { FormCheckBoxGroupComponent } from './../common.components/form-checkbox.component/form-checkbox.component';
 import { FormCheckGroupComponent } from './../common.components/form-checkbox.component/form-checkbox-group';
 import { FormAutocompleteComponent } from './../common.components/form-autocomplete.component/form-autocomplete.component';
+import { FormTemplateDropdownComponent } from './../common.components/form-templated-dropdown.component/form-templated-dropdown.component';
+import { FormTemplatedDropdownGroup } from './../common.components/form-templated-dropdown.component/form-templated-dropdown-group'
 import { ModelChangeObservableDirective }
     from './../common.directives/ng-model-change-observable.directive/ng-model-change-observable.directive'
 
-
 @NgModule({
     imports: [FormsModule, ReactiveFormsModule, CommonModule],
-
-    exports: [BasicFormComponent, ComplexFormComponent, FormTextComponent,
-        FormDropdownComponent, FormRadioButtonComponent, FormToggleComponent, FormCheckBoxGroupComponent,
-        FormCheckGroupComponent, FormAutocompleteComponent, FormError],
-
-    declarations: [BasicFormComponent, ComplexFormComponent, FormTextComponent,
-        FormDropdownComponent, FormRadioButtonComponent, FormToggleComponent, FormCheckBoxGroupComponent,
-        FormCheckGroupComponent, FormAutocompleteComponent, FormError, ModelChangeObservableDirective]
+    exports: [BasicFormComponent, ComplexFormComponent, FormTextComponent, FormDropdownComponent,
+        FormRadioButtonComponent, FormToggleComponent, FormCheckBoxGroupComponent, FormCheckGroupComponent,
+        FormAutocompleteComponent, FormTemplatedDropdownGroup,
+        FormTemplateDropdownComponent,
+        FormError],
+    declarations: [BasicFormComponent, ComplexFormComponent, FormTextComponent, FormDropdownComponent,
+        FormRadioButtonComponent, FormToggleComponent, FormCheckBoxGroupComponent, FormCheckGroupComponent, FormTemplatedDropdownGroup,
+        FormAutocompleteComponent, FormError,
+        FormTemplateDropdownComponent, ModelChangeObservableDirective]
 })
 
-export class WelcomeModule {
-    ;
-}
+export class WelcomeModule { ; }

@@ -2,11 +2,26 @@
     role="form">
     <form-autocomplete [name]="formControls.inputAutocomplete.id" [(ngModel)]=formControls.inputAutocomplete.value [inputData]=formControls.inputAutocomplete
         [allowListValueOnly]=true [(required)]="formControls.inputAutocomplete.isRequired"></form-autocomplete>
+    <form-template-dropdown [name]="formControls.inputTemplateDropdwon.id" [inputData]=formControls.inputTemplateDropdwon [(ngModel)]=formControls.inputTemplateDropdwon.value
+        [(required)]="formControls.inputTemplateDropdwon.isRequired" #templateDropDown>
+        <span class="selected-item-template">{{templateDropDown.selectedOption.text.description}}</span>
+        <template let-row="row">
+            <span class="glyphicon" [ngClass]="row.text.iconClass"> {{row.text.description}}</span>
+        </template>
+        <pre>
+            
+        </pre>
+    </form-template-dropdown>
     <form-checkbox-group [name]="formControls.inputCheckboxGroup.id" [(ngModel)]=formControls.inputCheckboxGroup.value [inputData]=formControls.inputCheckboxGroup
         [(required)]="formControls.inputCheckboxGroup.isRequired">
     </form-checkbox-group>
     <div class="row">
-        <div class="col-sm-6 pull-right"> 
+        <pre>
+            {{mainForm.value|json}}
+        </pre>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 pull-right">
             <button type="submit" class="btn btn-lg btn-primary pull-right" [disabled]="!mainForm.valid">Submit Form</button>
         </div>
     </div>
